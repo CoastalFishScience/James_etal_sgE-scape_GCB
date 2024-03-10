@@ -136,7 +136,7 @@ df_r = df |>
 (left column) for a) seagrass, b) total leaf area, c) algae, and d)
 mangrove. Left column map for d) mangrove is the habitat map used to
 generate the 500 m buffer. Habitat maps shown here were generated from
-2019 data.](publication/FigS1.png)
+2019 data.](figures/FigS1.png)
 
 ## Calculate Index of Energetic Importance (IEI) values
 
@@ -254,7 +254,7 @@ species calculated using the habitat maps for 2019. The horizontal black
 line represents IEI value of 1. IEI values \> 1 means that the consumer
 is using that source more than expected based on the proportion of that
 habitat in the total foraging area, while the opposite is true for an
-IEI \< 1.](publication/Fig2.png)
+IEI \< 1.](figures/Fig2.png)
 
 ## Make *E*-scape for each species, year, and basin
 
@@ -348,7 +348,7 @@ habitat resource index (HRI) values \> 1 and cool colors (blues)
 represent HRI values \< 1. HRI values \> 1 indicate greater production
 of resources (i.e., more energetic resources) being used by the
 consumer, while the opposite is true for HRI values \<
-1.](publication/Fig4.png)
+1.](figures/Fig4.png)
 
 ## Statistical analyses
 
@@ -467,7 +467,7 @@ df = left_join(df, model_means_cld, by = c('Species', 'BASIN', 'do'))
 ![Boxplot for HRI values for each species and basin pre and post 2015
 seagrass die-off. Different letters indicate significantly different (p
 \< 0.05) groups based on model contrast comparisons with a Bonferroni
-correction.](publication/Fig3.png)
+correction.](figures/Fig3.png)
 
 ### Breakpoint
 
@@ -557,7 +557,7 @@ df
 basin. Vertical black line indicates break point and grey shade
 represents the 95% confidence interval. Horizontal line indicates model
 prediction and gray points indicate mean ± SD HRI values for
-basin.](publication/Fig5.png)
+basin.](figures/Fig5.png)
 
 ### Correlations
 

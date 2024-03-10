@@ -4,4 +4,4 @@
 .Ruserdata
 
 *.rds
-publication/
+figures/*.tiff
