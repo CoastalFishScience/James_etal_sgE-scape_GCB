@@ -1,0 +1,17 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  Data and code for James et al. "Widespread habitat loss leads to ecosystem-scale decrease in trophic function"
+message: Please cite this dataset using these metadata.
+type: dataset
+authors:
+  - given-names: W. Ryan James
+  - given-names: Bradley T. Furman
+  - given-names: Jonathan R. Rodemann
+  - given-names: Sophia V. Costa
+  - given-names: Zachary W. Fratto
+  - given-names: James A. Nelson
+  - given-names: Jennifer S. Rehage
+  - given-names: Rolando O. Santos
