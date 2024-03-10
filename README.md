@@ -1,5 +1,3 @@
-# Analysis for Widespread habitat loss leads to ecosystem-scale decrease
-in trophic function
 
 This script outlines the analysis and code used in James et al. 2024 to
 analyze the effect of habitat loss on ecosystem-scale trophic function.
