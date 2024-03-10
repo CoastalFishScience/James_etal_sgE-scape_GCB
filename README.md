@@ -132,11 +132,11 @@ df_r = df |>
   left_join(df_man, by = 'BASIN')
 ```
 
-![Example kriged habitat maps (right column) from monitoring points
-(left column) for a) seagrass, b) total leaf area, c) algae, and d)
-mangrove. Left column map for d) mangrove is the habitat map used to
-generate the 500 m buffer. Habitat maps shown here were generated from
-2019 data.](figures/FigS1.png)
+![](figures/FigS1.png) **Figure S1.** Example kriged habitat maps (right
+column) from monitoring points (left column) for a) seagrass, b) total
+leaf area, c) algae, and d) mangrove. Left column map for d) mangrove is
+the habitat map used to generate the 500 m buffer. Habitat maps shown
+here were generated from 2019 data.
 
 ## Calculate Index of Energetic Importance (IEI) values
 
@@ -248,13 +248,13 @@ IEI = fhab |>
   summarize(across(iei_sg:iei_alg, \(x) median(x, na.rm = T)))
 ```
 
-![Boxplot of the index of energetic (IEI) values for each
-resource/habitat based on the 50 random points in each basin for each
-species calculated using the habitat maps for 2019. The horizontal black
-line represents IEI value of 1. IEI values \> 1 means that the consumer
-is using that source more than expected based on the proportion of that
-habitat in the total foraging area, while the opposite is true for an
-IEI \< 1.](figures/Fig2.png)
+![](figures/Fig2.png) **Figure 2.** Boxplot of the index of energetic
+(IEI) values for each resource/habitat based on the 50 random points in
+each basin for each species calculated using the habitat maps for 2019.
+The horizontal black line represents IEI value of 1. IEI values \> 1
+means that the consumer is using that source more than expected based on
+the proportion of that habitat in the total foraging area, while the
+opposite is true for an IEI \< 1.
 
 ## Make *E*-scape for each species, year, and basin
 
@@ -340,15 +340,15 @@ HRI = f_hab |>
 st_write(HRI, 'gis/FLBay_E-scapeAll.shp')
 ```
 
-![*E*-scapes for a) bay anchovy, b) pinfish, and c) pink shrimp before
-and after the 2015 seagrass die-off for Johnson, Rankin, and Whipray
-basins in Florida Bay. HRI values from all years before and after were
-averaged for each landscape foraging unit. Warm colors (reds) represent
-habitat resource index (HRI) values \> 1 and cool colors (blues)
-represent HRI values \< 1. HRI values \> 1 indicate greater production
-of resources (i.e., more energetic resources) being used by the
-consumer, while the opposite is true for HRI values \<
-1.](figures/Fig4.png)
+![](figures/Fig4.png) **Figure 4** *E*-scapes for a) bay anchovy, b)
+pinfish, and c) pink shrimp before and after the 2015 seagrass die-off
+for Johnson, Rankin, and Whipray basins in Florida Bay. HRI values from
+all years before and after were averaged for each landscape foraging
+unit. Warm colors (reds) represent habitat resource index (HRI) values
+\> 1 and cool colors (blues) represent HRI values \< 1. HRI values \> 1
+indicate greater production of resources (i.e., more energetic
+resources) being used by the consumer, while the opposite is true for
+HRI values \< 1.
 
 ## Statistical analyses
 
@@ -464,10 +464,10 @@ model_means_cld
 df = left_join(df, model_means_cld, by = c('Species', 'BASIN', 'do'))
 ```
 
-![Boxplot for HRI values for each species and basin pre and post 2015
-seagrass die-off. Different letters indicate significantly different (p
-\< 0.05) groups based on model contrast comparisons with a Bonferroni
-correction.](figures/Fig3.png)
+![](figures/Fig3.png) **Figure 4.** Boxplot for HRI values for each
+species and basin pre and post 2015 seagrass die-off. Different letters
+indicate significantly different (p \< 0.05) groups based on model
+contrast comparisons with a Bonferroni correction.
 
 ### Breakpoint
 
@@ -552,12 +552,12 @@ df
 ## 9 Pink shrimp WHP    4.23 3.25e- 1     NA    NA    NA
 ```
 
-![Breakpoints based on intercept model for mean habitat resource index
-(HRI) values for a) bay anchovy, b) pinfish, and c) pigfish for each
-basin. Vertical black line indicates break point and grey shade
-represents the 95% confidence interval. Horizontal line indicates model
-prediction and gray points indicate mean ± SD HRI values for
-basin.](figures/Fig5.png)
+![](figures/Fig5.png) **Figure 5.** Breakpoints based on intercept model
+for mean habitat resource index (HRI) values for a) bay anchovy, b)
+pinfish, and c) pigfish for each basin. Vertical black line indicates
+break point and grey shade represents the 95% confidence interval.
+Horizontal line indicates model prediction and gray points indicate mean
+± SD HRI values for basin.
 
 ### Correlations
 
@@ -632,3 +632,13 @@ cor.test(x = df$f_sg, y = df$HRI,  method = 'pearson')
 ##       cor 
 ## 0.7531434
 ```
+
+![](figures/Fig6.png) **Figure 6.** Correlation for the proportional
+habitat cover and habitat resource index (HRI) values for each landscape
+foraging unit across all species and seasons. There was a positive
+correlation between seagrass (r = 0.75, t = 105.9, p value \< 0.001) and
+leaf area (r = 0.80, t = 125.2, p value \< 0.001) habitat cover with HRI
+values. There was a slightly positive correlation between mangrove
+habitat cover and HRI values (r = 0.23, t = 22.0, p value \< 0.001).
+Algal habitat cover and HRI values had a slightly negative correlation
+(r = -0.10, t = -9.5, p value \< 0.001).
