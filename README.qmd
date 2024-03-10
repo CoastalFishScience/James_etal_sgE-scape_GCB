@@ -119,7 +119,7 @@ df_r = df |>
 
 
 ```
-![Example kriged habitat maps (right column) from monitoring points (left column) for a) seagrass, b) total leaf area, c) algae, and d) mangrove. Left column map for d) mangrove is the habitat map used to generate the 500 m buffer. Habitat maps shown here were generated from 2019 data.](publication/FigS1.tiff) 
+![Example kriged habitat maps (right column) from monitoring points (left column) for a) seagrass, b) total leaf area, c) algae, and d) mangrove. Left column map for d) mangrove is the habitat map used to generate the 500 m buffer. Habitat maps shown here were generated from 2019 data.](publication/FigS1.png) 
 
 ## Calculate Index of Energetic Importance (IEI) values
 Combining the basal resource use and habitat maps, we calculated an index of energetic importance (IEI) for each of the four resource/habitat type combinations for each consumer (James et al. 2022a). Each IEI was calculated with the following formula: 
@@ -205,7 +205,7 @@ IEI = fhab |>
   summarize(across(iei_sg:iei_alg, \(x) median(x, na.rm = T)))
 
 ```
-![Boxplot of the index of energetic (IEI) values for each resource/habitat based on the 50 random points in each basin for each species calculated using the habitat maps for 2019. The horizontal black line represents IEI value of 1. IEI values > 1 means that the consumer is using that source more than expected based on the proportion of that habitat in the total foraging area, while the opposite is true for an IEI < 1.](publication/Fig2.tiff) 
+![Boxplot of the index of energetic (IEI) values for each resource/habitat based on the 50 random points in each basin for each species calculated using the habitat maps for 2019. The horizontal black line represents IEI value of 1. IEI values > 1 means that the consumer is using that source more than expected based on the proportion of that habitat in the total foraging area, while the opposite is true for an IEI < 1.](publication/Fig2.png) 
 
 ## Make *E*-scape for each species, year, and basin
 *E*-scapes were generated for each species at each basin between 2007 and 2019. IEI values were combined with habitat cover areas within a landscape foraging unit (grid cell with an area that corresponds to the movement range of the consumer) to calculate the habitat resource index (HRI). HRI was calculated with the following formula: 
@@ -266,7 +266,7 @@ HRI = f_hab |>
 st_write(HRI, 'gis/FLBay_E-scapeAll.shp')
 
 ```
-![*E*-scapes for a) bay anchovy, b) pinfish, and c) pink shrimp before and after the 2015 seagrass die-off for Johnson, Rankin, and Whipray basins in Florida Bay. HRI values from all years before and after were averaged for each landscape foraging unit. Warm colors (reds) represent habitat resource index (HRI) values > 1 and cool colors (blues) represent HRI values < 1. HRI values > 1 indicate greater production of resources (i.e., more energetic resources) being used by the consumer, while the opposite is true for HRI values < 1.](publication/Fig4.tiff) 
+![*E*-scapes for a) bay anchovy, b) pinfish, and c) pink shrimp before and after the 2015 seagrass die-off for Johnson, Rankin, and Whipray basins in Florida Bay. HRI values from all years before and after were averaged for each landscape foraging unit. Warm colors (reds) represent habitat resource index (HRI) values > 1 and cool colors (blues) represent HRI values < 1. HRI values > 1 indicate greater production of resources (i.e., more energetic resources) being used by the consumer, while the opposite is true for HRI values < 1.](publication/Fig4.png) 
 
 ## Statistical analyses
 ### ANOVA
@@ -312,7 +312,7 @@ model_means_cld
 df = left_join(df, model_means_cld, by = c('Species', 'BASIN', 'do'))
 
 ```
-![Boxplot for HRI values for each species and basin pre and post 2015 seagrass die-off. Different letters indicate significantly different (p < 0.05) groups based on model contrast comparisons with a Bonferroni correction.](publication/Fig3.tiff) 
+![Boxplot for HRI values for each species and basin pre and post 2015 seagrass die-off. Different letters indicate significantly different (p < 0.05) groups based on model contrast comparisons with a Bonferroni correction.](publication/Fig3.png) 
 
 ### Breakpoint 
 Spatiotemporal trends in trophic function for each species were determined by averaging the HRI values of each landscape foraging unit to generate a basin-wide mean for each basin and year. We conducted breakpoint analysis across years on the mean trends on HRI value for each species using the R package `strucchange`. This package uses simple linear regression to estimate data breakpoints and test for differences in mean conditions using an intercept-only model. We assessed the optimal number of breakpoints for each model based on the lowest Bayesian information criterion (BIC) score.
@@ -345,7 +345,7 @@ df = st_read('gis/FLBay_E-scapeAll.shp') |>
 
 df
 ```
-![Breakpoints based on intercept model for mean habitat resource index (HRI) values for a) bay anchovy, b) pinfish, and c) pigfish for each basin. Vertical black line indicates break point and grey shade represents the 95% confidence interval. Horizontal line indicates model prediction and gray points indicate mean ± SD HRI values for basin.](publication/Fig5.tiff) 
+![Breakpoints based on intercept model for mean habitat resource index (HRI) values for a) bay anchovy, b) pinfish, and c) pigfish for each basin. Vertical black line indicates break point and grey shade represents the 95% confidence interval. Horizontal line indicates model prediction and gray points indicate mean ± SD HRI values for basin.](publication/Fig5.png) 
 
 ### Correlations
 We ran correlations between HRI values and $f_{habitat_i}$ across all species, years, and basins. 
