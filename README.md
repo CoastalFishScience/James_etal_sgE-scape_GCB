@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/767765286.svg)](https://zenodo.org/doi/10.5281/zenodo.10802559)
 
 This script outlines the analysis and code used in James et al. 2024 to
 analyze the effect of habitat loss on ecosystem-scale trophic function.

@@ -5,6 +5,7 @@ format: gfm
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = T, cache = T)
 ```
+[![DOI](https://zenodo.org/badge/767765286.svg)](https://zenodo.org/doi/10.5281/zenodo.10802559)
 
 This script outlines the analysis and code used in James et al. 2024 to analyze the effect of habitat loss on ecosystem-scale trophic function. Percent cover data (FHAP_pc.csv) from the Florida Fish and Wildlife Conservation Commission Fisheries Habitat Assessment Program were used to generate habitat maps and combined with basal resource use from stable isotope mixing models (mm3spp.csv) from [James et al. 2022](https://doi.org/10.1093/icesjms/fsac112) to generate *E*-scapes for bay anchovy, pinfish, and pink shrimp from 2007-2019. This can also be found as an [R script](sgE-scape_analysis.R). 
 
